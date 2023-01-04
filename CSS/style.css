@@ -10,7 +10,7 @@ a {
 
 
 .landingPage {
-background-image: url("/Images/colorfulnature.jpg");
+background-image: url("../Images/colorfulnature.jpg");
 padding-top: 0;
 width: 100vw;
 height:100vh;
