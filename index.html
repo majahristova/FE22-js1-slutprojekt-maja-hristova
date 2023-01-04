@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickR</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="Javascript/anime.min.js" defer></script>
+    <script src="Javascript/script.js" defer></script>
+</head>
+<body>
+    <div class="landingPage">
+     <h1 class="logo"> ;FlickR</h1>
+     <p> Flickr is a media platform used for uploading, organizing, and sharing digital media such as photos and videos. </p>
+     <button class="landingpageSearchButton">
+        <a href="#form">Start search</a>
+     </button>
+</div>
+ <main class="divForFormSearch">
+    <div class="circleBackgroundForForm">
+        <form id="form">
+            <h1 class="divForFormSearchH1">Search for Image</h1>
+            <input type="search" placeholder="Search..." id="search_input_box" required>
+            <input type="number" id="number_input_box" min="1" placeholder="How many?" required>
+            <label for="size" id="size">Choose size</label>
+            <select id="chooseSize" >
+                <option value="w">Small</option>
+                <option value="z">Medium</option>
+                <option value="c">Large</option>
+            </select>
+            <label for="sort" id="sort">Sort by</label>
+            <select id="chooseSort" >
+                <option value=" date-posted-desc">Uploaded first</option>
+                <option value="relevance">Relevance</option>
+                <option value="interestingness-desc" >Interestingness</option>
+            </select>
+            <button id="button">Search</button>
+        </form>
+    </div>
+    <div class="circleforBackgroundSmallOne"></div>
+    <div class="circleforBackgroundSmallTwo"></div>
+    <div class="circleforBackgroundSmallthree"></div>
+    <div class="circleforBackgroundSmallfour"></div>
+    <div class="circleforBackgroundSmallfive"></div>
+</main>
+    <p id="errorParagraf"></p>
+    <div id="imageContainer">
+        <button onclick="scrollbacktoFormFunction()" id="onClickBtn" title="Go to top">Top</button>
+        <div id="gridContainerForLandingpage">
+            <img src="Images/img_1.png" class="img1">
+            <img src="Images/img 2.png" class="img2">
+            <img src="Images/img_3.png" class="img3">
+            <img src="Images/img_6.png" class="img6">
+            <img src="Images/img_7.png" class="img7">
+            <img src="Images/img_8.png" class="img8"> 
+            <img src="Images/img_9.png" class="img9">
+            <img src="Images/img_10.png" class="img10">
+            <img src="Images/img_11.png" class="img11">
+            <img src="Images/img_12.png" class="img12">
+        </div>
+    </div>
+    <div id="divForAnimation"></div>
+</body>
+</html>

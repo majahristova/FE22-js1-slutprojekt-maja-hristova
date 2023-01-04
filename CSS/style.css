@@ -1,0 +1,294 @@
+body{
+    margin: 0;
+    background-color:white;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+
+.landingPage {
+background-image: url("/Images/colorfulnature.jpg");
+padding-top: 0;
+width: 100vw;
+height:100vh;
+opacity: 0.8;
+object-fit: cover;
+
+}
+
+.logo{
+    width: 120px;
+    height:80px;
+    color: white;
+    font-weight: 200;
+    font-size: 5rem;
+    position: absolute;
+    left: 6vw;
+    top:6vh;
+
+}
+
+.landingPage p {
+    color: white;
+    font-weight: 300;
+    position:absolute;
+    width: 25rem;
+    font-size: 0.9rem;
+    top:25vh;
+    left:10vw;
+
+}
+
+.landingpageSearchButton{
+    width: 6rem;
+    min-height: 2rem;
+    background-color: white;
+    padding: 0.7rem;
+    border:none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    position: absolute;
+    top: 33vh;
+    left:28vw;
+
+}
+#form{
+    box-sizing: border-box;
+    width:30rem;
+    height: 20rem;
+    
+}
+
+.divForFormSearch{
+        padding-top: 7rem;
+        width: 100%;
+        height: 40rem;
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+    
+}
+.divForFormSearchH1{
+    color: white;
+    text-align: center;
+}
+
+
+
+#number_input_box, #search_input_box{
+    width: 13rem;
+    padding: 0.5rem; 
+    margin: 0.7rem 0.6rem;
+    border:none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+
+
+#size, #sort {
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding-right: 20px;
+    color: white;
+}
+
+#sort{
+    padding-left: 15px;
+}
+
+#chooseSize, #chooseSort{
+    width: 5rem;
+    padding: 0.5rem; 
+    margin: 0.7rem 0.6rem;
+    border:none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+
+
+#button{
+    margin: 1.5rem 11rem;
+    width: 7rem;
+    min-height: 3rem;
+    background-color: white;
+    padding: 0.7rem;
+    border:none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+
+}
+
+
+.circleforBackgroundSmallOne{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    position:absolute;
+    top:120vh;
+    left: 82vw;
+}
+
+.circleforBackgroundSmallTwo{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    position:absolute;
+    top:145vh;
+    left: 9vw;
+}
+
+.circleforBackgroundSmallthree{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    position:absolute; 
+    top:189vh;
+    left: 8vw;
+}
+
+
+.circleforBackgroundSmallfour{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    position:absolute;
+    top:120vh;
+    left: 20vw;
+}
+
+
+.circleforBackgroundSmallfive{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    position:absolute;
+    top:178vh;
+    left: 81vw;
+}
+
+
+
+.circleBackgroundForForm{
+    border-radius: 50%;
+    width: 40rem;
+    height: 40rem;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#imageContainer{
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#gridContainerForLandingpage{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(18, 1fr) ;
+    max-width: 1000px;
+    height: 1300px;
+    border-style: solid;
+    border-width: 50px;
+    border-color: white;
+    gap:15px;
+}
+
+
+#gridContainerForLandingpage img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img1{
+    grid-column: 1/1;
+    grid-row: 1/4;
+    
+}
+.img2{
+    grid-column: 1/1;
+    grid-row: 4/9;
+}
+
+.img3{
+    grid-column: 1/1;
+    grid-row: 9/12;
+}
+
+
+.img6{
+    grid-column: 1/1;
+    grid-row: 12/18;
+}
+
+.img7{
+    grid-column: 2/4;
+    grid-row: 11/18;
+}
+
+.img8{
+    grid-column: 4/6;
+    grid-row: 12/18;
+}
+
+.img9{
+    grid-column: 4/6;
+    grid-row: 1/9;
+}
+.img10{
+    grid-column: 4/6;
+    grid-row: 9/12;
+}
+
+.img11{
+    grid-column: 2/4;
+    grid-row: 6/11;
+}
+.img12{
+    grid-column: 2/4;
+    grid-row: 1/6;
+}
+#divForAnimation{
+display: none;
+    width : 40px;
+    height :40px;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+   border-radius: 50%;
+    position: absolute;
+   left:25vw;
+   top:207vh;
+   
+}
+
+#onClickBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to bottom right, #FF9EC4, #FFD07E);
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+
