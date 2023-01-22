@@ -5,6 +5,7 @@ const error = document.querySelector('#errorParagraf');
 const searchImageButton = document.querySelector('#button');
 searchImageButton.addEventListener('click', searchImages);
 
+//Loading animation
 const loadingAnimation = {  
     targets: '#divForAnimation',
     translateX: '35vw',
@@ -18,6 +19,22 @@ const loadingAnimation = {
       },  
 }
 
+//Scroll back to form button 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 2000) {
+    backToFormButton.style.display = "block";
+  } else {
+    backToFormButton.style.display = "none";
+  }
+}
+function scrollbacktoFormFunction() {
+  document.body.scrollTop = 1000;
+} 
+
+
+// Input form to search Image
 function searchImages(event) {
     event.preventDefault();
 
@@ -38,7 +55,7 @@ function searchImages(event) {
         fetchImages(searchInputValue,sortInputValue,numberInputValue);
     }
 }
-
+ //Fetching the image
 function fetchImages(searchText ,sortOption, numberOfImages){
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=38d66c0067208e612c0c5abe54218289&text=${searchText}&sort=${sortOption}&per_page=${numberOfImages}&format=json&nojsoncallback=1`;
     gridImageContainer.remove();
@@ -60,6 +77,7 @@ function fetchImages(searchText ,sortOption, numberOfImages){
     });
 }
 
+//Showing the images on the website
 function showImages(apiData) {
     if(apiData.photos.photo.length === 0) {
         showErrorMessage("Could not find any images");
@@ -87,26 +105,37 @@ function showImages(apiData) {
         const displayImages = document.createElement('img');
         imageContainer.appendChild(displayImages);
         displayImages.src = showImagesUrl;
+        displayImages.addEventListener("click", () => makeImageBigger(displayImages))
+
     }
 }
 
+// Onclick making images bigger by using a modal 
+function makeImageBigger(image){  
+   const imageModal = document.querySelector('#imageModal');
+   const modalContent = document.querySelector('#modalContent');
+   const first = modalContent.firstElementChild
+    while (first) {
+        first.remove();
+        first = modalContent.firstElementChild;
+    }
+    const clone = image.cloneNode(true);
+    modalContent.appendChild(clone)
+    imageModal.style.display = "flex";
+    imageModal.addEventListener('click',closeModal) 
+
+}
+// Onclick closing the modal
+function closeModal () {
+    const imageModal = document.querySelector('#imageModal');
+    imageModal.style.display = "none";
+}
+
+// function that shows error message
 function showErrorMessage(errorMessage) {
     error.innerText = errorMessage;
     containerForImages.innerHTML= '';
 }
 
 
-//Scroll back to form button 
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
-    backToFormButton.style.display = "block";
-  } else {
-    backToFormButton.style.display = "none";
-  }
-}
-function scrollbacktoFormFunction() {
-  document.body.scrollTop = 1000;
-  document.documentElement.scrollTop = 1000;
-} 
